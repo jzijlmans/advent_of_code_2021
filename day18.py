@@ -197,12 +197,6 @@ with open(filename) as f:
     for line in f:
         ps.append(create_pair_from_string(line))
 
-# p = add(copy.deepcopy(ps[0]),copy.deepcopy(ps[1]))
-# p.print()
-# mag = calc_mag(p)
-# print(mag)
-# ps[0].print()
-
 max_mag = 0
 for i in range(len(ps)):
     for j in range(len(ps)):
@@ -212,55 +206,3 @@ for i in range(len(ps)):
             max_mag = mag
         print( str(mag) + ' = ' + ps[i].create_string('') + ' + ' + ps[j].create_string(''))
 print(max_mag)
-
-
-
-# p1 = create_pair_from_string('[[[[4,0],[5,4]],[[7,7],[6,0]]],[[8,[7,7]],[[7,9],[5,0]]]]')
-# p2 = create_pair_from_string('[[2,[[0,8],[3,4]]],[[[6,7],1],[7,[1,6]]]]')
-# p = add(p1,p2)
-# p.print()
-
-# p1 = create_pair_from_string('[[[0,[4,5]],[0,0]],[[[4,5],[2,6]],[9,5]]]')
-# p1.print()
-# p2 = create_pair_from_string('[7,[[[3,7],[4,3]],[[6,3],[8,8]]]]')
-# print('+')
-# p2.print()
-# p3 = add(p1,p2)
-# print('=')
-# p3.print()
-# print('+')
-# p4 = create_pair_from_string('[[2,[[0,8],[3,4]]],[[[6,7],1],[7,[1,6]]]]')
-# p4.print()
-# print('=')
-# p3 = create_pair_from_string(p3.create_string(''))
-# p5 = add(p3,p4)
-# p5.print()
-
-# p3 = create_pair_from_string('[[2,[[0,8],[3,4]]],[[[6,7],1],[7,[1,6]]]]')
-# p4 = add(p1,p2)
-# p4 = create_pair_from_string(p4.create_string(''))
-# print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-# p5 = add(p4,p3)
-# p5.print()
-
-# add(Pair(Pair(Pair(Pair(4,3,3),4,2),4,1),Pair(7,Pair(Pair(8,4,3),9,2),1),0), Pair(1,1,0)) #[[[[4,3],4],4],[7,[[8,4],9]]] + [1,1]
-
-
-# p = Pair(Pair(Pair(Pair(Pair(9,8,4),1,3),2,2), 3, 1), 4, 0) #[[[[[9,8],1],2],3],4]
-# p = Pair(7, Pair(6, Pair(5, Pair(4, Pair(3,2,4),3),2),1),0) #[7,[6,[5,[4,[3,2]]]]]
-# p = Pair(Pair(6,Pair(5,Pair(4,Pair(3,2,4),3),2),1),1,0)#[[6,[5,[4,[3,2]]]],1]
-# p = Pair(Pair(3,Pair(2,Pair(1,Pair(7,3,4),3),2),1),Pair(6,Pair(5,Pair(4,Pair(3,2,4),3),2),1),0)#[[3,[2,[1,[7,3]]]],[6,[5,[4,[3,2]]]]]
-
-# p.print()
-# print('\n')
-# has_exploded = True
-# while has_exploded:
-#     has_exploded, exploded = p.check_explode()
-#     p.print()
-#     print('\n')
-
-# p = Pair(15,15,0)
-# p.print()
-# print('\n')
-# p.check_split()
-# p.print()
